@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Enquiries</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/common.js" ></script>
+	</head>
+	<body body onLoad="document.enquiries.userid.focus();">
+		<!-- Nav -->
+		<nav class="main-nav">
+			<a href="#">
+				<img class="logo" src="img/Logo 2.png" alt="logo" />
+			</a>
+
+			<ul class="nav-ul show">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="enquiries.html">Enquiries</a></li>
+			</ul>
+
+			<div class="toggle-collapse">
+				<div class="toggle-icons">
+					<i class="fas fa-bars"> </i>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<h1 class="form-h1">Enquiries</h1>
+			<form class="modal-content" onSubmit="return validateForm()" name="enquiries"   >
+				<div class="container">
+					
+					<label for="userid"><b> Name:</b></label>
+					<input type="text" placeholder="Enter  your name" name="userid" size="12">
+					<div class="status" id="status"></div>
+
+					<label for="phone"><b>Number:</b></label>
+					<input type="number" placeholder="Enter Phone number" name="phone"  size="12">
+
+					<label for="email"><b>Email:</b></label>
+					<input type="text" class="form-control" placeholder="Enter Email" name="email">
+					<div class="help-block with-errors"></div>
+
+					<label for="enquiries"><b>Enquiry:</b></b></label>
+					<textarea name="enquiries" placeholder="Type Here" class="txt-area" ></textarea>
+
+					<div class="clearfix">
+						<button type="submit" class="signupbtn" onSubmit= "return validateForm()" onclick="submitForm()">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
